@@ -1,0 +1,456 @@
+<!--
+  TEMPLATES D'EMAILS POUR SUPABASE
+
+  Instructions:
+  1. Allez dans votre Dashboard Supabase
+  2. Authentication > Email Templates
+  3. Sélectionnez le template à modifier
+  4. Copiez-collez le code HTML correspondant
+  5. Remplacez "VOTRE-DOMAINE.COM" par votre vrai domaine
+  6. Remplacez l'URL du logo si nécessaire
+-->
+
+<!-- ================================ -->
+<!-- TEMPLATE 1: RESET PASSWORD -->
+<!-- ================================ -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réinitialisation de mot de passe</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f9fafb;">
+  <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f9fafb;">
+    <tr>
+      <td align="center" style="padding: 40px 20px;">
+        <table role="presentation" style="max-width: 600px; width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+
+          <!-- Header avec logo -->
+          <tr>
+            <td style="padding: 40px 40px 20px 40px; text-align: center; background: linear-gradient(135deg, #fef3c7 0%, #ffffff 50%, #fef3c7 100%); border-radius: 16px 16px 0 0;">
+              <img src="https://fixgpojncxsnkoyjjkcm.supabase.co/storage/v1/object/public/assets/Logo%20Noour%20(500%20x%20150%20px)%20(2)%20(1).png" alt="Logo" style="height: 60px; width: auto; margin-bottom: 20px;">
+              <h1 style="margin: 0; color: #1f2937; font-size: 28px; font-weight: 700;">Réinitialisation de mot de passe</h1>
+            </td>
+          </tr>
+
+          <!-- Contenu -->
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 20px 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Bonjour,
+              </p>
+
+              <p style="margin: 0 0 30px 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Vous avez demandé à réinitialiser votre mot de passe. Cliquez sur le bouton ci-dessous pour définir un nouveau mot de passe :
+              </p>
+
+              <!-- Bouton CTA -->
+              <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td align="center" style="padding: 20px 0;">
+                    <a href="{{ .ConfirmationURL }}" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 600; border-radius: 8px; box-shadow: 0 4px 6px rgba(245, 158, 11, 0.3);">
+                      Réinitialiser mon mot de passe
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 30px 0 20px 0; color: #6b7280; font-size: 14px; line-height: 20px;">
+                Si le bouton ne fonctionne pas, copiez et collez ce lien dans votre navigateur :
+              </p>
+
+              <p style="margin: 0 0 30px 0; padding: 12px; background-color: #f3f4f6; border-radius: 6px; word-break: break-all; font-size: 13px; color: #6b7280;">
+                {{ .ConfirmationURL }}
+              </p>
+
+              <div style="padding: 20px; background-color: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 6px; margin: 30px 0;">
+                <p style="margin: 0; color: #92400e; font-size: 14px; line-height: 20px;">
+                  <strong>Important :</strong> Ce lien est valide pendant 1 heure. Si vous n'avez pas demandé cette réinitialisation, vous pouvez ignorer cet email en toute sécurité.
+                </p>
+              </div>
+
+              <p style="margin: 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Cordialement,<br>
+                <strong>L'équipe SHAMS IMMO</strong>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 30px 40px; background-color: #f9fafb; border-radius: 0 0 16px 16px; text-align: center;">
+              <p style="margin: 0 0 10px 0; color: #9ca3af; font-size: 12px;">
+                Cet email a été envoyé par SHAMS IMMO
+              </p>
+              <p style="margin: 0; color: #9ca3af; font-size: 12px;">
+                © 2024 SHAMS IMMO. Tous droits réservés.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
+
+<!-- ================================ -->
+<!-- TEMPLATE 2: CONFIRM SIGNUP (pour nouveaux collaborateurs) -->
+<!-- ================================ -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenue - Confirmez votre compte</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f9fafb;">
+  <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f9fafb;">
+    <tr>
+      <td align="center" style="padding: 40px 20px;">
+        <table role="presentation" style="max-width: 600px; width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+
+          <!-- Header avec logo -->
+          <tr>
+            <td style="padding: 40px 40px 20px 40px; text-align: center; background: linear-gradient(135deg, #fef3c7 0%, #ffffff 50%, #fef3c7 100%); border-radius: 16px 16px 0 0;">
+              <img src="https://fixgpojncxsnkoyjjkcm.supabase.co/storage/v1/object/public/assets/Logo%20Noour%20(500%20x%20150%20px)%20(2)%20(1).png" alt="Logo" style="height: 60px; width: auto; margin-bottom: 20px;">
+              <h1 style="margin: 0; color: #1f2937; font-size: 28px; font-weight: 700;">Bienvenue chez SHAMS IMMO</h1>
+            </td>
+          </tr>
+
+          <!-- Contenu -->
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 20px 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Bonjour,
+              </p>
+
+              <p style="margin: 0 0 30px 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Bienvenue dans votre espace collaborateur ! Un compte a été créé pour vous. Pour finaliser votre inscription et définir votre mot de passe, cliquez sur le bouton ci-dessous :
+              </p>
+
+              <!-- Bouton CTA -->
+              <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td align="center" style="padding: 20px 0;">
+                    <a href="{{ .ConfirmationURL }}" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 600; border-radius: 8px; box-shadow: 0 4px 6px rgba(245, 158, 11, 0.3);">
+                      Activer mon compte
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 30px 0 20px 0; color: #6b7280; font-size: 14px; line-height: 20px;">
+                Si le bouton ne fonctionne pas, copiez et collez ce lien dans votre navigateur :
+              </p>
+
+              <p style="margin: 0 0 30px 0; padding: 12px; background-color: #f3f4f6; border-radius: 6px; word-break: break-all; font-size: 13px; color: #6b7280;">
+                {{ .ConfirmationURL }}
+              </p>
+
+              <div style="padding: 20px; background-color: #dbeafe; border-left: 4px solid #3b82f6; border-radius: 6px; margin: 30px 0;">
+                <p style="margin: 0 0 10px 0; color: #1e3a8a; font-size: 14px; line-height: 20px;">
+                  <strong>Votre email de connexion :</strong>
+                </p>
+                <p style="margin: 0; color: #1e40af; font-size: 15px; font-weight: 600;">
+                  {{ .Email }}
+                </p>
+              </div>
+
+              <p style="margin: 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                À très bientôt,<br>
+                <strong>L'équipe SHAMS IMMO</strong>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 30px 40px; background-color: #f9fafb; border-radius: 0 0 16px 16px; text-align: center;">
+              <p style="margin: 0 0 10px 0; color: #9ca3af; font-size: 12px;">
+                Cet email a été envoyé par SHAMS IMMO
+              </p>
+              <p style="margin: 0; color: #9ca3af; font-size: 12px;">
+                © 2024 SHAMS IMMO. Tous droits réservés.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
+
+<!-- ================================ -->
+<!-- TEMPLATE 3: INVITE USER (invitation collaborateur) -->
+<!-- ================================ -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitation à rejoindre SHAMS IMMO</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f9fafb;">
+  <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f9fafb;">
+    <tr>
+      <td align="center" style="padding: 40px 20px;">
+        <table role="presentation" style="max-width: 600px; width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+
+          <!-- Header avec logo -->
+          <tr>
+            <td style="padding: 40px 40px 20px 40px; text-align: center; background: linear-gradient(135deg, #fef3c7 0%, #ffffff 50%, #fef3c7 100%); border-radius: 16px 16px 0 0;">
+              <img src="https://fixgpojncxsnkoyjjkcm.supabase.co/storage/v1/object/public/assets/Logo%20Noour%20(500%20x%20150%20px)%20(2)%20(1).png" alt="Logo" style="height: 60px; width: auto; margin-bottom: 20px;">
+              <h1 style="margin: 0; color: #1f2937; font-size: 28px; font-weight: 700;">Vous êtes invité(e) !</h1>
+            </td>
+          </tr>
+
+          <!-- Contenu -->
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 20px 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Bonjour,
+              </p>
+
+              <p style="margin: 0 0 30px 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Vous avez été invité(e) à rejoindre l'équipe SHAMS IMMO en tant que collaborateur. Cliquez sur le bouton ci-dessous pour créer votre compte et commencer :
+              </p>
+
+              <!-- Bouton CTA -->
+              <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td align="center" style="padding: 20px 0;">
+                    <a href="{{ .ConfirmationURL }}" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 600; border-radius: 8px; box-shadow: 0 4px 6px rgba(245, 158, 11, 0.3);">
+                      Accepter l'invitation
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 30px 0 20px 0; color: #6b7280; font-size: 14px; line-height: 20px;">
+                Si le bouton ne fonctionne pas, copiez et collez ce lien dans votre navigateur :
+              </p>
+
+              <p style="margin: 0 0 30px 0; padding: 12px; background-color: #f3f4f6; border-radius: 6px; word-break: break-all; font-size: 13px; color: #6b7280;">
+                {{ .ConfirmationURL }}
+              </p>
+
+              <div style="padding: 20px; background-color: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 6px; margin: 30px 0;">
+                <p style="margin: 0 0 10px 0; color: #14532d; font-size: 14px; line-height: 20px;">
+                  <strong>Votre accès :</strong>
+                </p>
+                <p style="margin: 0; color: #15803d; font-size: 15px;">
+                  Email : <strong>{{ .Email }}</strong>
+                </p>
+              </div>
+
+              <p style="margin: 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Nous sommes ravis de vous accueillir dans notre équipe !<br>
+                <strong>L'équipe SHAMS IMMO</strong>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 30px 40px; background-color: #f9fafb; border-radius: 0 0 16px 16px; text-align: center;">
+              <p style="margin: 0 0 10px 0; color: #9ca3af; font-size: 12px;">
+                Cet email a été envoyé par SHAMS IMMO
+              </p>
+              <p style="margin: 0; color: #9ca3af; font-size: 12px;">
+                © 2024 SHAMS IMMO. Tous droits réservés.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
+
+<!-- ================================ -->
+<!-- TEMPLATE 4: MAGIC LINK (connexion sans mot de passe) -->
+<!-- ================================ -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lien de connexion</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f9fafb;">
+  <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f9fafb;">
+    <tr>
+      <td align="center" style="padding: 40px 20px;">
+        <table role="presentation" style="max-width: 600px; width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+
+          <!-- Header avec logo -->
+          <tr>
+            <td style="padding: 40px 40px 20px 40px; text-align: center; background: linear-gradient(135deg, #fef3c7 0%, #ffffff 50%, #fef3c7 100%); border-radius: 16px 16px 0 0;">
+              <img src="https://fixgpojncxsnkoyjjkcm.supabase.co/storage/v1/object/public/assets/Logo%20Noour%20(500%20x%20150%20px)%20(2)%20(1).png" alt="Logo" style="height: 60px; width: auto; margin-bottom: 20px;">
+              <h1 style="margin: 0; color: #1f2937; font-size: 28px; font-weight: 700;">Connexion rapide</h1>
+            </td>
+          </tr>
+
+          <!-- Contenu -->
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 20px 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Bonjour,
+              </p>
+
+              <p style="margin: 0 0 30px 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Cliquez sur le bouton ci-dessous pour vous connecter à votre compte SHAMS IMMO :
+              </p>
+
+              <!-- Bouton CTA -->
+              <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td align="center" style="padding: 20px 0;">
+                    <a href="{{ .ConfirmationURL }}" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 600; border-radius: 8px; box-shadow: 0 4px 6px rgba(245, 158, 11, 0.3);">
+                      Se connecter
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 30px 0 20px 0; color: #6b7280; font-size: 14px; line-height: 20px;">
+                Si le bouton ne fonctionne pas, copiez et collez ce lien dans votre navigateur :
+              </p>
+
+              <p style="margin: 0 0 30px 0; padding: 12px; background-color: #f3f4f6; border-radius: 6px; word-break: break-all; font-size: 13px; color: #6b7280;">
+                {{ .ConfirmationURL }}
+              </p>
+
+              <div style="padding: 20px; background-color: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 6px; margin: 30px 0;">
+                <p style="margin: 0; color: #92400e; font-size: 14px; line-height: 20px;">
+                  <strong>Sécurité :</strong> Ce lien est valide pendant 1 heure et ne peut être utilisé qu'une seule fois. Si vous n'avez pas demandé cette connexion, ignorez cet email.
+                </p>
+              </div>
+
+              <p style="margin: 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Cordialement,<br>
+                <strong>L'équipe SHAMS IMMO</strong>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 30px 40px; background-color: #f9fafb; border-radius: 0 0 16px 16px; text-align: center;">
+              <p style="margin: 0 0 10px 0; color: #9ca3af; font-size: 12px;">
+                Cet email a été envoyé par SHAMS IMMO
+              </p>
+              <p style="margin: 0; color: #9ca3af; font-size: 12px;">
+                © 2024 SHAMS IMMO. Tous droits réservés.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
+
+<!-- ================================ -->
+<!-- TEMPLATE 5: CHANGE EMAIL (changement d'adresse email) -->
+<!-- ================================ -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation de changement d'email</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f9fafb;">
+  <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f9fafb;">
+    <tr>
+      <td align="center" style="padding: 40px 20px;">
+        <table role="presentation" style="max-width: 600px; width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+
+          <!-- Header avec logo -->
+          <tr>
+            <td style="padding: 40px 40px 20px 40px; text-align: center; background: linear-gradient(135deg, #fef3c7 0%, #ffffff 50%, #fef3c7 100%); border-radius: 16px 16px 0 0;">
+              <img src="https://fixgpojncxsnkoyjjkcm.supabase.co/storage/v1/object/public/assets/Logo%20Noour%20(500%20x%20150%20px)%20(2)%20(1).png" alt="Logo" style="height: 60px; width: auto; margin-bottom: 20px;">
+              <h1 style="margin: 0; color: #1f2937; font-size: 28px; font-weight: 700;">Changement d'adresse email</h1>
+            </td>
+          </tr>
+
+          <!-- Contenu -->
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 20px 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Bonjour,
+              </p>
+
+              <p style="margin: 0 0 30px 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Une demande de changement d'adresse email a été effectuée pour votre compte. Pour confirmer cette modification, cliquez sur le bouton ci-dessous :
+              </p>
+
+              <!-- Bouton CTA -->
+              <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td align="center" style="padding: 20px 0;">
+                    <a href="{{ .ConfirmationURL }}" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 600; border-radius: 8px; box-shadow: 0 4px 6px rgba(245, 158, 11, 0.3);">
+                      Confirmer le changement
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 30px 0 20px 0; color: #6b7280; font-size: 14px; line-height: 20px;">
+                Si le bouton ne fonctionne pas, copiez et collez ce lien dans votre navigateur :
+              </p>
+
+              <p style="margin: 0 0 30px 0; padding: 12px; background-color: #f3f4f6; border-radius: 6px; word-break: break-all; font-size: 13px; color: #6b7280;">
+                {{ .ConfirmationURL }}
+              </p>
+
+              <div style="padding: 20px; background-color: #fef2f2; border-left: 4px solid #ef4444; border-radius: 6px; margin: 30px 0;">
+                <p style="margin: 0; color: #7f1d1d; font-size: 14px; line-height: 20px;">
+                  <strong>Attention :</strong> Si vous n'avez pas demandé ce changement, veuillez contacter immédiatement l'administrateur. Votre compte pourrait être compromis.
+                </p>
+              </div>
+
+              <p style="margin: 0; color: #4b5563; font-size: 16px; line-height: 24px;">
+                Cordialement,<br>
+                <strong>L'équipe SHAMS IMMO</strong>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 30px 40px; background-color: #f9fafb; border-radius: 0 0 16px 16px; text-align: center;">
+              <p style="margin: 0 0 10px 0; color: #9ca3af; font-size: 12px;">
+                Cet email a été envoyé par SHAMS IMMO
+              </p>
+              <p style="margin: 0; color: #9ca3af; font-size: 12px;">
+                © 2024 SHAMS IMMO. Tous droits réservés.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
